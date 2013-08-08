@@ -1,0 +1,13 @@
+LICENSE.md
+README.md
+requirements.txt
+setup.py
+soe_api.egg-info/PKG-INFO
+soe_api.egg-info/SOURCES.txt
+soe_api.egg-info/dependency_links.txt
+soe_api.egg-info/requires.txt
+soe_api.egg-info/top_level.txt
+stats/__init__.py
+stats/eq2.py
+stats/ps2.py
+stats/soe.py

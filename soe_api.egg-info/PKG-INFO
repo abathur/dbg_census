@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: soe-api
+Version: 0.1.0
+Summary: Rudimentary Python API package for Sony Online Entertainment (SOE)'s stats/census API, includes Planetside 2 and Everquest 2.
+Home-page: https://github.com/abathur/soe_api
+Author: Travis A. Everett
+Author-email: travis.a.everett@gmail.comm
+License: LICENSE.md
+Description: soe_api
+        =======
+        
+        Rudimentary Python API package for Sony Online Entertainment (SOE)'s stats/census API, includes Planetside 2 and Everquest 2
+        
+Platform: UNKNOWN
