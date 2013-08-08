@@ -16,11 +16,11 @@ or add to requirements.txt:
 
 from soe_stats import ps2
 
-api = ps2.Stats()
-api.service_id = "your_service"
+	api = ps2.Stats()
+	api.service_id = "your_service"
 
-collections = api.collections()
-character = api.collection('character')
-full_return = api("outfit", {"alias":"FCRW", "c:resolve":"member_online_status"})
-members = full_return["outfit_list"][0]["members"]
-member_ids = map(lambda x: x['character_id'], members)
+	collections = api.collections()
+	character = api.collection('character')
+	full_return = api("outfit", {"alias":"FCRW", "c:resolve":"member_online_status"})
+	members = full_return["outfit_list"][0]["members"]
+	member_ids = map(lambda x: x['character_id'], members)
