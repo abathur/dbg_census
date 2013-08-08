@@ -29,22 +29,23 @@ class Stats:
 	def __str__(self):
 		return "SOE STATS API"
 
-	# just for introspection really
-	def collections(self, collection):
-		"""list available collections for this namespace"""
+	def fetch_collections(self):
 		if self._collection_names is None:
 			collections = self("", {})['datatype_list']
 			self._collection_names = map(lambda x: x['name'], collections)
 			for thing in collections:
 				self._collections[thing['name']] = thing
 
-		if collection is not None:
-			return self._collections[collection]
 
+	# just for introspection really
+	def collections(self):
+		"""list available collections for this namespace"""
+		self.fetch_collections()
 		return self._collection_names
 
-
-
-
-
-
+	def collection(self, collection):
+		"""list info on a specific collection"""
+		self.fetch_collections()
+		if collection is not None:
+			return self._collections[collection]
+		return None
