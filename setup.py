@@ -8,7 +8,7 @@ setup(
     packages=['soe', 'soe.Stats', 'ps2', 'ps2.Stats', 'eq2', 'eq2.Stats'],
     url='https://github.com/abathur/soe_api',
     license='LICENSE.md',
-    description='Rudimentary Python API package for Sony Online Entertainment (SOE)'s stats/census API, includes Planetside 2 and Everquest 2.',
+    description="Rudimentary Python API package for Sony Online Entertainment (SOE)'s stats/census API, includes Planetside 2 and Everquest 2.",
     long_description=open('README.md').read(),
     install_requires=[
         "requests",
