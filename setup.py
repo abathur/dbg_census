@@ -5,7 +5,7 @@ setup(
     version='0.1.0',
     author='Travis A. Everett',
     author_email='travis.a.everett@gmail.comm',
-    packages=['stats'],
+    packages=['soe_stats'],
     url='https://github.com/abathur/soe_api',
     license='LICENSE.md',
     description="Rudimentary Python API package for Sony Online Entertainment (SOE)'s stats/census API, includes Planetside 2 and Everquest 2.",
