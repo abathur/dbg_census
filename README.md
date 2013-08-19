@@ -14,7 +14,7 @@ or add to requirements.txt:
 
 ##Usage
 
-from soe_stats import ps2
+	from soe_stats import ps2
 
 	api = ps2.Stats("v2") # no string for default namespace
 	api.service_id = "your_service"
