@@ -16,7 +16,7 @@ or add to requirements.txt:
 
 from soe_stats import ps2
 
-	api = ps2.Stats()
+	api = ps2.Stats("v2") # no string for default namespace
 	api.service_id = "your_service"
 
 	collections = api.collections()

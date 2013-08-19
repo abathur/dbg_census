@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='soe_api',
-    version='0.1.0',
+    version='0.1.1',
     author='Travis A. Everett',
     author_email='travis.a.everett@gmail.comm',
     packages=['soe_stats'],

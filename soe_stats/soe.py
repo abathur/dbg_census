@@ -8,10 +8,14 @@ class Stats:
 	base_url = "census.soe.com"
 	service_id = None # not strictly required--API works without, but TOS does say it's required, so you may get throttled or blacklisted for excessive calls without
 	verb = "get" # sensible default
-	namespace = None # must be set to use
+	_namespace = None # must be set to use
 	format = "json" # sensible default
 	_collections = {}
 	_collection_names = None
+	version = None
+
+	def __init__(self, ver):
+		self.version = ver
 
 	def __call__(self, collection, options):
 		target = None
@@ -24,7 +28,19 @@ class Stats:
 		if result.ok:
 			return result.json()
 		else:
-			result.raise_for_stats()
+			result.raise_for_status()
+
+	@property
+	def namespace(self):
+		if self.version:
+			return "%s:%s" % (self._namespace, self.version)
+		else:
+	    	return self._namespace
+
+	@namespace.setter
+	def namespace(self, value):
+	    self._namespace = value
+
 
 	def __str__(self):
 		return "SOE STATS API"
