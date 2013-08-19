@@ -35,11 +35,11 @@ class Stats:
 		if self.version:
 			return "%s:%s" % (self._namespace, self.version)
 		else:
-	    	return self._namespace
+			return self._namespace
 
 	@namespace.setter
 	def namespace(self, value):
-	    self._namespace = value
+		self._namespace = value
 
 
 	def __str__(self):
