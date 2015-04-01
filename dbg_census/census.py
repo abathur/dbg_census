@@ -6,23 +6,21 @@ import requests
 
 class Stats:
 	base_url = "census.daybreakgames.com"
-	service_id = "example" # service ID required. Example is throttled at 10/minute per ip.
+	service_id = None
 	verb = "get" # sensible default
 	_namespace = None # must be set to use
-	format = "json" # sensible default
+	fmt = "json" # sensible default
 	_collections = {}
 	_collection_names = None
 	version = None
 
-	def __init__(self, ver):
-		self.version = ver
+	# service ID now required. Example is throttled at 10/minute per ip.
+	def __init__(self, api_version=None, service_id="example"):
+		self.version = api_version
+		self.service_id = service_id
 
 	def __call__(self, collection, options):
-		target = None
-		if self.service_id:
-			target = "http://%s/s:%s/%s/%s/%s/%s" % (self.base_url, self.service_id, self.format, self.verb, self.namespace, collection)
-		else:
-			target = "http://%s/%s/%s/%s/%s" % (self.base_url, self.format, self.verb, self.namespace, collection)
+		target = "http://%s/s:%s/%s/%s/%s/%s" % (self.base_url, self.service_id, self.fmt, self.verb, self.namespace, collection)
 
 		result = requests.get(target, params=options)
 		if result.ok:
@@ -42,13 +40,13 @@ class Stats:
 		self._namespace = value
 
 	def __str__(self):
-		return "SOE STATS API"
+		return "DBG CENSUS STATS API"
 
 	def fetch_collections(self):
 		if self._collection_names is None:
-			collections = self("", {})['datatype_list']
-			self._collection_names = map(lambda x: x['name'], collections)
-			for thing in collections:
+			api_collections = self("", {})['datatype_list']
+			self._collection_names = map(lambda x: x['name'], api_collections)
+			for thing in api_collections:
 				self._collections[thing['name']] = thing
 
 	# just for introspection really

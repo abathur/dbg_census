@@ -1,6 +1,6 @@
-import soe
+import census
 
-class Stats(soe.Stats):
+class Stats(census.Stats):
 	namespace = "eq2"
 
 	def __str__(self):

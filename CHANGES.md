@@ -1,6 +1,10 @@
 Changes
 =======
 
+###1.0.0
+    * changed name from soe_api to dbg_census
+    * main module changed name from soe_stats to dbg_census
+
 ###0.1.2
     * API base_url updated due to impending move of Census from census.soe.com to census.daybreakgames.com.
     * service_id set to default "example" which should work, but be rate-limited to 10 requests per minute per ip.
