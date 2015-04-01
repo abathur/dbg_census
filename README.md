@@ -3,6 +3,8 @@ soe_api
 
 Rudimentary Python API wrapper for Sony Online Entertainment (SOE)'s stats/census API, includes Planetside 2 and Everquest 2.
 
+*NOTE*: Since SOE is now Daybreak Games, I am ceasing maintenance of this repository. The project will continue under the name dbg_census (https://github.com/abathur/dbg_census).
+
 ##Installation
 can install with:
 

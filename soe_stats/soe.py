@@ -5,8 +5,8 @@ import requests
 # if someone else wants to maintain a wrapper to this, of course, they're free to do so
 
 class Stats:
-	base_url = "census.soe.com"
-	service_id = None # not strictly required--API works without, but TOS does say it's required, so you may get throttled or blacklisted for excessive calls without
+	base_url = "census.daybreakgames.com"
+	service_id = "example" # service ID required. Example is throttled at 10/minute per ip.
 	verb = "get" # sensible default
 	_namespace = None # must be set to use
 	format = "json" # sensible default
@@ -41,7 +41,6 @@ class Stats:
 	def namespace(self, value):
 		self._namespace = value
 
-
 	def __str__(self):
 		return "SOE STATS API"
 
@@ -51,7 +50,6 @@ class Stats:
 			self._collection_names = map(lambda x: x['name'], collections)
 			for thing in collections:
 				self._collections[thing['name']] = thing
-
 
 	# just for introspection really
 	def collections(self):
