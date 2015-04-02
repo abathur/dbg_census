@@ -1,6 +1,9 @@
 Changes
 =======
 
+###1.0.1
+    * Python 3 compatibility
+
 ###1.0.0
     * changed name from soe_api to dbg_census
     * main module changed name from soe_stats to dbg_census
