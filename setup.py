@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='dbg_census',
-    version='1.0.1',
+    version='1.0.2',
     author='Travis A. Everett',
     author_email='travis.a.everett@gmail.com',
     packages=['dbg_census'],

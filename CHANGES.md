@@ -1,6 +1,9 @@
 Changes
 =======
 
+###1.0.2
+	* Bug with unicode strings in setup.py
+
 ###1.0.1
     * Python 3 compatibility
 
