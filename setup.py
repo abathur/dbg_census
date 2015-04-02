@@ -1,11 +1,10 @@
-from __future__ import unicode_literals
 from setuptools import setup, find_packages
 
 setup(
     name='dbg_census',
     version='1.0.1',
     author='Travis A. Everett',
-    author_email='travis.a.everett@gmail.comm',
+    author_email='travis.a.everett@gmail.com',
     packages=['dbg_census'],
     url='https://github.com/abathur/dbg_census',
     license='LICENSE.md',
