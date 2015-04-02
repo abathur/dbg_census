@@ -1,4 +1,5 @@
 # PS2 API wrapper
+from __future__ import unicode_literals
 import requests
 
 # we aren't going to create explicit methods, just a framework for calling them
@@ -45,7 +46,7 @@ class Stats:
 	def fetch_collections(self):
 		if self._collection_names is None:
 			api_collections = self("", {})['datatype_list']
-			self._collection_names = map(lambda x: x['name'], api_collections)
+			self._collection_names = [x['name'] for x in api_collections]
 			for thing in api_collections:
 				self._collections[thing['name']] = thing
 

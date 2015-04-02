@@ -1,4 +1,4 @@
-import census
+from . import census
 
 class Stats(census.Stats):
 	namespace = "eq2"

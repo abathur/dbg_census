@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from setuptools import setup, find_packages
 
 setup(
@@ -8,9 +9,9 @@ setup(
     packages=['dbg_census'],
     url='https://github.com/abathur/dbg_census',
     license='LICENSE.md',
-    description="Minimalistic Python wrapper for Daybreak Games Census API, which provides stats and other information for DBG titles like Planetside 2, Everquest 2, and DC Universe Online.",
+    description='Minimalistic Python wrapper for Daybreak Games Census API, which provides stats and other information for DBG titles like Planetside 2, Everquest 2, and DC Universe Online.',
     long_description=open('README.md').read(),
     install_requires=[
-        "requests",
+        'requests',
     ],
 )
